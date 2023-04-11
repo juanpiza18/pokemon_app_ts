@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <PokemonProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
     <App />
   </BrowserRouter>
 </PokemonProvider>

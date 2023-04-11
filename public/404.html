@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Page not found</title>
+  </head>
+  <body>
+    <p>Page not found</p>
+    <script>
+      const url = window.location.href;
+      const baseUrl = url.substr(0, url.lastIndexOf("/") + 1);
+      window.history.replaceState(null, null, baseUrl + "/#/404");
+    </script>
+  </body>
+</html>
