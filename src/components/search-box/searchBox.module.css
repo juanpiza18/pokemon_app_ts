@@ -1,0 +1,14 @@
+.search__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search {
+  outline: none;
+  padding: 10px;
+  width: 1000%;
+  line-height: 30px;
+  justify-self: center;
+  margin-right: 9px;
+}

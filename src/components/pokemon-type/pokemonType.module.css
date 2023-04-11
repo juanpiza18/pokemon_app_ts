@@ -1,0 +1,70 @@
+.types {
+  border-radius: 20px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  width: 150px;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.types:not(:last-child) {
+  margin-right: 5px;
+}
+
+.types--lightblue {
+  background: lightskyblue;
+}
+
+.types--brown {
+  background: brown;
+}
+
+.types--blue {
+  background: blue;
+}
+
+.types--electric {
+  background: darkgoldenrod;
+}
+
+.types--gray {
+  background: lightslategray;
+}
+
+.types--moon {
+  background: darkblue;
+}
+
+.types--plum {
+  background: plum;
+}
+
+.types--green {
+  background: green;
+}
+
+.types--purple {
+  background: purple;
+}
+
+.types--yellow {
+  color: #000;
+  background: yellow;
+}
+
+.types--red {
+  background: red;
+}
+
+.types--orange {
+  background: orange;
+}
+
+.types--orangered {
+  background: orangered;
+}
