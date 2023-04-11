@@ -1,14 +1,14 @@
 import React from "react";
 import styles from "./pokemonType.module.css";
  
-type PokemonTypes<T> = {
+type PokemonTypes = {
   [key: string]: {
-    styleType: T;
+    styleType: string;
     icon: string;
   }
 }
 
-const types: PokemonTypes<string> = {
+const types: PokemonTypes = {
   grass: { styleType: "types--green", icon: "fa-leaf" },
   poison: { styleType: "types--purple", icon: "fa-skull-crossbones" },
   fire: { styleType: "types--red", icon: "fa-fire" },

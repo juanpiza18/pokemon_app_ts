@@ -3,7 +3,7 @@ import { Moves } from "../../models/pokemon.type";
 import styles from "./pokemonMoves.module.css";
 
 interface PokemonMovesProps {
-  moves: Moves[] | undefined;
+  moves: Moves[];
 }
 
 const PokemonMoves = ({ moves }: PokemonMovesProps) => {

@@ -28,7 +28,7 @@ export interface Pokemon {
 }
 
 export interface Sprites {
-    "back_default": string;
+    "back_default": Image;
     "back_female":Image;
     "back_shiny": Image;
     "back_shiny_female": Image;

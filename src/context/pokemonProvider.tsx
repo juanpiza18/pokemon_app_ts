@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, ReactElement } from "react";
+import React, { useState, useCallback, useRef } from "react";
 import PokemonContext from "./pokemonContext";
 import {
   getAllPokemons,
@@ -26,12 +26,7 @@ const options = {
   keys: ["name"],
 };
 
-interface PokemonProviderProps {
-    children: ReactElement
-}
-
-
-export const PokemonProvider = ({ children }: PokemonProviderProps) => {
+export const PokemonProvider = ({ children }: React.PropsWithChildren) => {
   let fuseRef = useRef< any | Fuse<Pokemon> >(null);
   const [pokemonsList, setPokemonList] = useState<Pokemon[]>([]);
   const [allPokemonsFilter, setAllPokemonsFilter] = useState<Pokemon[]>([]);
@@ -49,7 +44,7 @@ export const PokemonProvider = ({ children }: PokemonProviderProps) => {
   }, [offset, setPokemonList, setLoading]);
 
   const fetchPokemonData = useCallback(
-    async (id: string) => {
+    async (id: number) => {
       setpokemonLoading(true);
       const data = await getPokemonById(id);
       setPokemon(data);
@@ -94,6 +89,10 @@ export const PokemonProvider = ({ children }: PokemonProviderProps) => {
     });
   };
 
+  const setIndividualPokemonLoading = () => {
+    setpokemonLoading((prev) => !prev );
+  }; 
+
   return (
     <PokemonContext.Provider
       value={{
@@ -108,6 +107,7 @@ export const PokemonProvider = ({ children }: PokemonProviderProps) => {
         fetchPokemonData,
         pokemon,
         pokemonLoading,
+        setIndividualPokemonLoading: setIndividualPokemonLoading,
       }}
     >
       {children}

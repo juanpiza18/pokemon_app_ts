@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./statsStyles.module.css";
 
 interface PokemonStatsProps {
-  stats: Stats[] | undefined;
+  stats: Stats[];
 }
 
 const PokemonStats = ({ stats }: PokemonStatsProps) => {

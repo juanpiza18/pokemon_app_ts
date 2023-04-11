@@ -1,7 +1,7 @@
 import { Pokemon, PokemonsAPI } from "../models/pokemon.type";
 import { pokemonAPI } from "./constants";
 
-export const getPokemonById = async (id: string): Promise<Pokemon> => {
+export const getPokemonById = async (id: number): Promise<Pokemon> => {
   const pokemonData:Pokemon = await (await fetch(`${pokemonAPI}pokemon/${id}`)).json();
   return pokemonData;
 };

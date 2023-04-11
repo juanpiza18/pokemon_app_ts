@@ -9,7 +9,8 @@
     <script>
       const url = window.location.href;
       const baseUrl = url.substr(0, url.lastIndexOf("/") + 1);
-      window.history.replaceState(null, null, baseUrl + "/#/404");
+      const isPokemonRoute = url.includes("/pokemon/");
+      const hasId = isPokemonRoute && url.split("/pokemon/").length === 2;
     </script>
   </body>
 </html>

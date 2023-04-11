@@ -10,7 +10,8 @@ interface PokemonContextDefinitions {
     paginationPrev: () => void,
     filterAllList: (filter:string) => Promise<void>,
     fetchData: () => void,
-    fetchPokemonData: (id: string) => Promise<void>,
+    fetchPokemonData: (id: number) => Promise<void>,
+    setIndividualPokemonLoading: () => void;
     pokemon?: Pokemon,
     pokemonLoading: boolean,
 }
@@ -25,6 +26,7 @@ const Context:PokemonContextDefinitions = {
     filterAllList: async () => {},
     fetchData: () => {},
     fetchPokemonData: async () => {},
+    setIndividualPokemonLoading: () => {},
     pokemon: undefined,
     pokemonLoading: false,
 }

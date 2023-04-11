@@ -4,7 +4,7 @@ import PokemonType from "../pokemon-type/pokemonType.component";
 import styles from "./pokemonProfile.module.css";
 
 interface PokemonProfileProps {
-  pokemon: Pokemon | undefined;
+  pokemon: Pokemon;
   image: Image;
 }
 

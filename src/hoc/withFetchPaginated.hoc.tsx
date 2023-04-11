@@ -1,14 +1,13 @@
-import React, { useContext, useEffect, ComponentType, FC } from "react";
+import React, { useContext, useEffect, ComponentType, FC, Context } from "react";
 import useResultsPaginated from "../hooks/useResultsPagination.hooks";
 import Pagination from "../components/pagination/pagination.component";
-import PokemonContext from "../context/pokemonContext";
 
 interface FetchProps {
   filter?: string;
 }
 
-const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>, contextProvider = PokemonContext): FC<P & FetchProps> =>{
-  return function Fetch({ filter, ...otherProps }: P & FetchProps) {
+const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>, contextProvider: Context<any>): FC<FetchProps> =>{
+  return function Fetch({ filter }: FetchProps) {
     const {
       loading,
       dataList,
@@ -34,6 +33,7 @@ const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>
     const data = filter ? filteredArray : dataList;
     const prev = filter ? pageOffsetPrev : paginationPrev;
     const next = filter ? pageOffsetNext : paginationNext;
+ 
     const componentProps = {
       list: data,
       loading: loading
@@ -43,7 +43,7 @@ const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>
       <div className="flex__container">
         <Pagination paginationNext={next} paginationPrev={prev} />
         <div className="card__grid">
-          <WrappedComponent {...otherProps} {...componentProps} />
+          <WrappedComponent {...componentProps} />
         </div>
       </div>
     );

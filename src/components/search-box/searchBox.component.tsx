@@ -7,8 +7,8 @@ interface SearchBoxProps {
     handleChange?: (event:React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchBox = ({ placeHolder, handleChange = () => {} }: SearchBoxProps) => {
-  const handleSearch = debounce((event: React.ChangeEvent<HTMLInputElement>) => handleChange(event));
+const SearchBox = ({ placeHolder, handleChange }: SearchBoxProps) => {
+  const handleSearch = debounce((event: React.ChangeEvent<HTMLInputElement>) => handleChange?.(event));
   return (
     <div className={styles.search__container}>
       <input
