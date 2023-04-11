@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/pokemon_app_ts/static/css/main.682c91d5.css",
-    "main.js": "/pokemon_app_ts/static/js/main.5a8809ea.js",
+    "main.css": "/pokemon_app_ts/static/css/main.4f823dcb.css",
+    "main.js": "/pokemon_app_ts/static/js/main.434db002.js",
     "static/js/787.a8fe51ff.chunk.js": "/pokemon_app_ts/static/js/787.a8fe51ff.chunk.js",
     "static/media/Pokedex_logo.png": "/pokemon_app_ts/static/media/Pokedex_logo.907dcf3a592a0e37e0dd.png",
     "index.html": "/pokemon_app_ts/index.html",
-    "main.682c91d5.css.map": "/pokemon_app_ts/static/css/main.682c91d5.css.map",
-    "main.5a8809ea.js.map": "/pokemon_app_ts/static/js/main.5a8809ea.js.map",
+    "main.4f823dcb.css.map": "/pokemon_app_ts/static/css/main.4f823dcb.css.map",
+    "main.434db002.js.map": "/pokemon_app_ts/static/js/main.434db002.js.map",
     "787.a8fe51ff.chunk.js.map": "/pokemon_app_ts/static/js/787.a8fe51ff.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.682c91d5.css",
-    "static/js/main.5a8809ea.js"
+    "static/css/main.4f823dcb.css",
+    "static/js/main.434db002.js"
   ]
 }
