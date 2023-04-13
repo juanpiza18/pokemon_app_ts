@@ -26,7 +26,7 @@ const options = {
   keys: ["name"],
 };
 
-export const PokemonProvider:FC = ({ children }: React.PropsWithChildren) => {
+export const PokemonProvider:FC<React.PropsWithChildren> = ({ children }: React.PropsWithChildren) => {
   let fuseRef = useRef< any | Fuse<Pokemon> >(null);
   const [pokemonsList, setPokemonList] = useState<Pokemon[]>([]);
   const [allPokemonsFilter, setAllPokemonsFilter] = useState<Pokemon[]>([]);
