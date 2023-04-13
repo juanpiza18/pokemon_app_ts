@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, FC } from "react";
 import PokemonContext from "./pokemonContext";
 import {
   getAllPokemons,
@@ -26,7 +26,7 @@ const options = {
   keys: ["name"],
 };
 
-export const PokemonProvider = ({ children }: React.PropsWithChildren) => {
+export const PokemonProvider:FC = ({ children }: React.PropsWithChildren) => {
   let fuseRef = useRef< any | Fuse<Pokemon> >(null);
   const [pokemonsList, setPokemonList] = useState<Pokemon[]>([]);
   const [allPokemonsFilter, setAllPokemonsFilter] = useState<Pokemon[]>([]);
