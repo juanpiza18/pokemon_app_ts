@@ -26,6 +26,7 @@ const options = {
   keys: ["name"],
 };
 
+/**  JSX.element es el mejor tipo para estos cosas */
 export const PokemonProvider:FC<React.PropsWithChildren> = ({ children }: React.PropsWithChildren) => {
   let fuseRef = useRef< any | Fuse<Pokemon> >(null);
   const [pokemonsList, setPokemonList] = useState<Pokemon[]>([]);

@@ -4,7 +4,7 @@ import PokemonType from "../pokemon-type/pokemonType.component";
 import styles from "./pokemonCard.module.css";
 import { Types } from "../../models/pokemon.type";
 
-interface PokemonCardProps {
+export interface PokemonCardProps {
     imageUrl: string;
     pokemonName: string;
     pokemonNumber: number;
@@ -16,7 +16,7 @@ const PokemonCard = ({
   imageUrl,
   pokemonName,
   pokemonNumber,
-  pokemonType = [],
+  pokemonType,
 }: PokemonCardProps) => {
   return (
     <Link className={styles.card__link} to={`/pokemon/${pokemonNumber}`}>
@@ -32,7 +32,7 @@ const PokemonCard = ({
         />
         <div className={styles.pokemon__types}>
           {pokemonType.map(({ type }, index) => (
-            <PokemonType key={index} nameType={type.name} />
+            <PokemonType key={index} nameType={type.name} dataTestId={`pokemon-type${index}`}/>
           ))}
         </div>
       </div>

@@ -4,11 +4,11 @@ import SearchBox from "../search-box/searchBox.component";
 import logo from "../../assets/Pokedex_logo.png";
 import styles from "./header.module.css";
 
-interface HeaderProps {
-    handleSearch?: (event:React.ChangeEvent<HTMLInputElement> ) => void;
+export interface HeaderProps {
+  handleSearch?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Header = ({ handleSearch }:HeaderProps) => {
+const Header = ({ handleSearch }: HeaderProps) => {
   const { id } = useParams();
   return (
     <header>

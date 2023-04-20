@@ -3,7 +3,7 @@ import PokemonCard from "../card/pokemonCard.component";
 import WithSpinner from "../../hoc/withSpinner.hoc";
 import { Pokemon } from "../../models/pokemon.type";
 
-interface PokemonListProps {
+export interface PokemonListProps {
   list: Pokemon[];
 }
 

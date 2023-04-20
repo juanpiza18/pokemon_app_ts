@@ -1,14 +1,15 @@
 import React from "react";
 import styles from "./pokemonType.module.css";
  
-type PokemonTypes = {
+/* TODO: ENUM */
+export type PokemonTypes = {
   [key: string]: {
     styleType: string;
     icon: string;
   }
 }
 
-const types: PokemonTypes = {
+export const types: PokemonTypes = {
   grass: { styleType: "types--green", icon: "fa-leaf" },
   poison: { styleType: "types--purple", icon: "fa-skull-crossbones" },
   fire: { styleType: "types--red", icon: "fa-fire" },
@@ -30,22 +31,23 @@ const types: PokemonTypes = {
   unknow: { styleType: "", icon: "fa-question" },
 };
 
-interface PokemonTypeProps {
+export interface PokemonTypeProps {
   nameType: string;
+  dataTestId?: string;
 }
 
 
-const PokemonType = ({ nameType }: PokemonTypeProps) => {
+const PokemonType = ({ nameType, dataTestId }: PokemonTypeProps) => {
   const pokemonType = types[nameType];
   return (
     <>
       {pokemonType ? (
-        <div className={`${styles.types} ${styles[pokemonType.styleType]}`}>
+        <div className={`${styles.types} ${styles[pokemonType.styleType]}`} data-testid={dataTestId}>
           <i className={`fa-solid ${pokemonType.icon}`}></i>
           <span>{nameType}</span>
         </div>
       ) : (
-        <div className={styles.types}>
+        <div className={styles.types} data-testid={dataTestId} >
           <i className="fa-solid fa-paw"></i>
           {nameType}
         </div>
