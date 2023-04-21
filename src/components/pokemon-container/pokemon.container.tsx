@@ -5,10 +5,9 @@ import useResultsPaginated from "../../hooks/useResultsPagination.hooks";
 import Pagination from "../pagination/pagination.component";
 import { Pokemon } from "../../models/pokemon.type";
 
-interface PokemonContainerProps {
-  filter: string | null; 
+export interface PokemonContainerProps {
+  filter?: string | null;
 }
-
 
 const PokemonContainer = ({ filter = null }: PokemonContainerProps) => {
   const {
@@ -41,11 +40,8 @@ const PokemonContainer = ({ filter = null }: PokemonContainerProps) => {
         paginationNext={filter ? pageOffsetNext : paginationNext}
         paginationPrev={filter ? pageOffsetPrev : paginationPrev}
       />
-      <div className="card__grid">
-        <PokemonList
-          loading={loading}
-          list={list}
-        />
+      <div className="card__grid" data-testid="pokemon-list">
+        <PokemonList loading={loading} list={list} />
       </div>
     </div>
   );

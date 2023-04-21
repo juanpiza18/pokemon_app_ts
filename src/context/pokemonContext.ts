@@ -1,7 +1,7 @@
 import React from "react";
 import { Pokemon } from "../models/pokemon.type";
 
-interface PokemonContextDefinitions {
+export interface PokemonContextDefinitions {
     dataList: Pokemon[],
     filteredList: Pokemon[],
     offset: number,

@@ -7,7 +7,6 @@ export interface PokemonListProps {
   list: Pokemon[];
 }
 
-
 const PokemonList = ({ list }: PokemonListProps) => {
   return (
     <>
@@ -19,7 +18,7 @@ const PokemonList = ({ list }: PokemonListProps) => {
           return (
             <PokemonCard
               key={pokemon.id}
-              imageUrl={image ?? ''}
+              imageUrl={image ?? ""}
               pokemonName={pokemon.name}
               pokemonNumber={pokemon.id}
               pokemonType={pokemon.types}

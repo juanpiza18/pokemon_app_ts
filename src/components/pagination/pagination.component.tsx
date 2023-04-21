@@ -8,7 +8,7 @@ interface PaginationProps {
 
 const Pagination = ({ paginationNext, paginationPrev }: PaginationProps) => {
   return (
-    <div className={styles.list__actions}>
+    <div className={styles.list__actions} data-testid="pagination">
       <button className="btn" onClick={paginationPrev}>
         &larr; Prev
       </button>

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithFetchPaginated should render With Fetch Paginated and Match snapshot 1`] = `
+<div>
+  <div
+    class="flex__container"
+  >
+    <div
+      class="list__actions"
+      data-testid="pagination"
+    >
+      <button
+        class="btn"
+      >
+        ← Prev
+      </button>
+      <button
+        class="btn"
+      >
+        Next →
+      </button>
+    </div>
+    <div
+      class="card__grid"
+      data-testid="list"
+    >
+      <div
+        class="dummy__component"
+      />
+    </div>
+  </div>
+</div>
+`;

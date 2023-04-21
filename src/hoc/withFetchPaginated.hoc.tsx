@@ -1,4 +1,10 @@
-import React, { useContext, useEffect, ComponentType, FC, Context } from "react";
+import React, {
+  useContext,
+  useEffect,
+  ComponentType,
+  FC,
+  Context,
+} from "react";
 import useResultsPaginated from "../hooks/useResultsPagination.hooks";
 import Pagination from "../components/pagination/pagination.component";
 
@@ -6,7 +12,10 @@ interface FetchProps {
   filter?: string;
 }
 
-const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>, contextProvider: Context<any>): FC<FetchProps> =>{
+const WithFetchPaginated = <P extends object>(
+  WrappedComponent: ComponentType<P>,
+  contextProvider: Context<any>
+): FC<FetchProps> => {
   return function Fetch({ filter }: FetchProps) {
     const {
       loading,
@@ -33,21 +42,21 @@ const WithFetchPaginated = <P extends object>(WrappedComponent: ComponentType<P>
     const data = filter ? filteredArray : dataList;
     const prev = filter ? pageOffsetPrev : paginationPrev;
     const next = filter ? pageOffsetNext : paginationNext;
- 
+
     const componentProps = {
       list: data,
-      loading: loading
+      loading: loading,
     } as P;
 
     return (
       <div className="flex__container">
         <Pagination paginationNext={next} paginationPrev={prev} />
-        <div className="card__grid">
+        <div className="card__grid" data-testid="list">
           <WrappedComponent {...componentProps} />
         </div>
       </div>
     );
   };
-}
+};
 
 export default WithFetchPaginated;

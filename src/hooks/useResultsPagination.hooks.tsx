@@ -5,7 +5,7 @@ interface UseResultPaginatedProps<T> {
   initialItems: T[];
 }
 
-function useResultsPaginated <T>({ initialItems }: UseResultPaginatedProps<T>) {
+function useResultsPaginated<T>({ initialItems }: UseResultPaginatedProps<T>) {
   const [items, setItems] = React.useState<T[]>(initialItems);
   const [filteredArray, setfilteredArray] = React.useState<T[]>([]);
   const [pageOffset, setPageOffset] = React.useState(0);
@@ -47,7 +47,8 @@ function useResultsPaginated <T>({ initialItems }: UseResultPaginatedProps<T>) {
     pageOffsetNext,
     pageOffsetPrev,
     setPageOffset,
+    pageOffset,
   };
-};
+}
 
 export default useResultsPaginated;
