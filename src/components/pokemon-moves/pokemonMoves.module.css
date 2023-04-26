@@ -44,7 +44,7 @@
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 850px) {
   .listgrid__container {
     width: 70%;
   }

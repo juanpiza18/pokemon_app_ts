@@ -27,8 +27,10 @@ const options = {
 };
 
 /**  JSX.element es el mejor tipo para estos cosas */
-export const PokemonProvider:FC<React.PropsWithChildren> = ({ children }: React.PropsWithChildren) => {
-  let fuseRef = useRef< any | Fuse<Pokemon> >(null);
+export const PokemonProvider: FC<React.PropsWithChildren> = ({
+  children,
+}: React.PropsWithChildren) => {
+  let fuseRef = useRef<any | Fuse<Pokemon>>(null);
   const [pokemonsList, setPokemonList] = useState<Pokemon[]>([]);
   const [allPokemonsFilter, setAllPokemonsFilter] = useState<Pokemon[]>([]);
   const [offset, setOffset] = useState<number>(0);
@@ -91,8 +93,8 @@ export const PokemonProvider:FC<React.PropsWithChildren> = ({ children }: React.
   };
 
   const setIndividualPokemonLoading = () => {
-    setpokemonLoading((prev) => !prev );
-  }; 
+    setpokemonLoading((prev) => !prev);
+  };
 
   return (
     <PokemonContext.Provider

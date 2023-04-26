@@ -6,6 +6,7 @@ header {
   gap: 1rem;
   background-color: #006d77;
   align-items: center;
+  padding: 1rem;
 }
 
 .pokedex__logo {
@@ -40,10 +41,11 @@ nav ul li a:hover {
   color: black;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 850px) {
   header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(1, 1fr);
     height: 100px;
+    padding: unset;
   }
 }
